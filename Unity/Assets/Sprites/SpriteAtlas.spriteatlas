@@ -51,7 +51,10 @@ SpriteAtlas:
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 62b36711114c22d4297bb51a4776beba, type: 3}
+  - {fileID: 21300000, guid: 95ad9d6233e014b48b6cdb914dd3e9ea, type: 3}
+  - {fileID: 21300000, guid: da259772fb10d304b8bd83c963bb92f5, type: 3}
   - {fileID: 21300000, guid: 8ec675b20de9bfe4682ce304fbb20d68, type: 3}
+  - {fileID: 21300000, guid: a501a5734ab5351499dfd557ede20ffd, type: 3}
   - {fileID: 21300000, guid: 5e2370e39e44a97428709ac6d485cb12, type: 3}
   - {fileID: -1960522333, guid: 0704cc343c648bf47b625cf8c2aebb91, type: 3}
   - {fileID: -1562360488, guid: 0704cc343c648bf47b625cf8c2aebb91, type: 3}
@@ -63,13 +66,21 @@ SpriteAtlas:
   - {fileID: 1652468716, guid: 0704cc343c648bf47b625cf8c2aebb91, type: 3}
   - {fileID: 148288694, guid: 0704cc343c648bf47b625cf8c2aebb91, type: 3}
   - {fileID: -546919712, guid: 0704cc343c648bf47b625cf8c2aebb91, type: 3}
+  - {fileID: 21300000, guid: ed5a1074fd74d474b91b02b96573e54b, type: 3}
+  - {fileID: 21300000, guid: 648370d4201834741a1bcb665a376794, type: 3}
   - {fileID: 21300000, guid: 7c9a20e5b16893a43a50cb069b203143, type: 3}
   - {fileID: 21300000, guid: f8c0c036874ed044ca2cfd7e5f6af39a, type: 3}
   - {fileID: 21300000, guid: ed3d90ba46e4041469a08e0c593b5298, type: 3}
+  - {fileID: 21300000, guid: d2498d1cc0259a04e9d44ee7cdfcb90e, type: 3}
+  - {fileID: 21300000, guid: 63ca1ecc0bea07942adcea6a7d24484c, type: 3}
+  - {fileID: 21300000, guid: 7b95f96d129ff1242a300c2d1e4f0ed5, type: 3}
   - {fileID: 21300000, guid: c471a99ee71ec8747baaf1ec4436864e, type: 3}
   m_PackedSpriteNamesToIndex:
   - Core
+  - RoadIntersection
+  - RoadDeadEnd
   - Logo
+  - Clear
   - RadialGradient
   - Blob_9
   - Blob_8
@@ -81,9 +92,14 @@ SpriteAtlas:
   - Blob_2
   - Blob_1
   - Blob_0
+  - Parcel754
+  - RoadIntersectionBig
   - InvertedRadialGradient
   - Shape
   - Icon
+  - RoadTurn
+  - Road
+  - Grass
   - Frame
   m_RenderDataMap: {}
   m_Tag: SpriteAtlas

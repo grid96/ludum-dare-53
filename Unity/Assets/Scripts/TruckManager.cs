@@ -3,18 +3,21 @@ using UnityEngine;
 public class TruckManager : MonoBehaviour
 {
     public static TruckManager Instance { get; private set; }
-    
+
     private static Camera cam => Camera.main;
 
+    [SerializeField] private Transform parcelContainer;
     [SerializeField] private Rigidbody parcelPrefab;
     [SerializeField] private float moveSpeed = 10;
     [SerializeField] private float maxSpeed = 20;
     [SerializeField] private float rotationSpeed = 180;
+    [SerializeField] private float maxParcelRotationSpeed = 10;
+
     [SerializeField] private float driftFactor = 0.1f;
-    [SerializeField] private float leanFactor = 0.1f;
+    // [SerializeField] private float leanFactor = 0.2f;
 
     private Rigidbody rb;
-    
+
     public TruckManager() => Instance = this;
 
     private void Start()
@@ -25,10 +28,14 @@ public class TruckManager : MonoBehaviour
     private void ThrowOutParcel()
     {
         var t = transform;
-        Rigidbody parcel = Instantiate(parcelPrefab, t.position - t.forward * (t.localScale.z + parcelPrefab.transform.localScale.z) / 2, Quaternion.identity);
-        parcel.transform.rotation = t.rotation;
+        Rigidbody parcel = Instantiate(parcelPrefab, t.position - t.forward * (t.localScale.z + parcelPrefab.transform.localScale.z / 50) / 2, Quaternion.identity, parcelContainer);
+        parcel.transform.rotation = t.rotation * parcelPrefab.transform.rotation;
         
-        var right = transform.right;
+        float randomRotationSpeed = Random.Range(0, maxParcelRotationSpeed);
+        Vector3 randomDirection = Random.insideUnitSphere;
+        parcel.angularVelocity = randomDirection * randomRotationSpeed;
+
+        Vector3 right = transform.right;
         float driftAmount = Vector3.Dot(rb.velocity, right) * driftFactor;
         parcel.AddForce(-right * driftAmount - t.forward * 10f, ForceMode.VelocityChange);
     }
@@ -37,21 +44,21 @@ public class TruckManager : MonoBehaviour
     {
         if (cam == null)
             return;
-        
+
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         Plane plane = new Plane(Vector3.down, Vector3.zero);
         if (!plane.Raycast(ray, out var distance))
             return;
-        
+
         Vector3 targetPosition = ray.GetPoint(distance);
         Transform t = transform;
-        var position = t.position;
+        Vector3 position = t.position;
         targetPosition.y = position.y;
         Vector3 direction = (targetPosition - position).normalized;
         Quaternion toRotation = Quaternion.LookRotation(direction);
-        var rotation = t.rotation;
+        Quaternion rotation = t.rotation;
         rotation = Quaternion.RotateTowards(rotation, toRotation, rotationSpeed * Time.deltaTime);
-        
+
         // var right = t.right;
         // float leanAmount = Vector3.Dot(rb.velocity, right) * leanFactor;
         // rotation = Quaternion.Euler(rotation.eulerAngles.x, rotation.eulerAngles.y, leanAmount);
@@ -71,7 +78,7 @@ public class TruckManager : MonoBehaviour
 
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 
-        var right = transform.right;
+        Vector3 right = transform.right;
         float driftAmount = Vector3.Dot(rb.velocity, right) * driftFactor;
         rb.AddForce(-right * driftAmount, ForceMode.VelocityChange);
     }
