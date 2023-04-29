@@ -8,9 +8,10 @@ public class TruckManager : MonoBehaviour
 
     [SerializeField] private Rigidbody parcelPrefab;
     [SerializeField] private float moveSpeed = 10;
-    [SerializeField] private float driftFactor = 0.1f;
-    [SerializeField] private float rotationSpeed = 180;
     [SerializeField] private float maxSpeed = 20;
+    [SerializeField] private float rotationSpeed = 180;
+    [SerializeField] private float driftFactor = 0.1f;
+    [SerializeField] private float leanFactor = 0.1f;
 
     private Rigidbody rb;
     
@@ -43,12 +44,19 @@ public class TruckManager : MonoBehaviour
             return;
         
         Vector3 targetPosition = ray.GetPoint(distance);
-        var position = transform.position;
+        Transform t = transform;
+        var position = t.position;
         targetPosition.y = position.y;
         Vector3 direction = (targetPosition - position).normalized;
         Quaternion toRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        var rotation = t.rotation;
+        rotation = Quaternion.RotateTowards(rotation, toRotation, rotationSpeed * Time.deltaTime);
         
+        // var right = t.right;
+        // float leanAmount = Vector3.Dot(rb.velocity, right) * leanFactor;
+        // rotation = Quaternion.Euler(rotation.eulerAngles.x, rotation.eulerAngles.y, leanAmount);
+        t.rotation = rotation;
+
         var camTransform = cam.transform;
         camTransform.position = new Vector3(position.x, camTransform.position.y, position.z);
 

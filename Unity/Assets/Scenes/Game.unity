@@ -254,7 +254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65097304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.01, z: 0}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -291,9 +291,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parcelPrefab: {fileID: 8597980845919445321, guid: 31d08bb255cd4aa4b85715cd78bde280, type: 3}
   moveSpeed: 10
-  driftFactor: 0.1
-  rotationSpeed: 180
   maxSpeed: 20
+  rotationSpeed: 180
+  driftFactor: 0.1
+  leanFactor: 1
 --- !u!1 &99859742
 GameObject:
   m_ObjectHideFlags: 0
