@@ -64,8 +64,14 @@ public class TruckManager : MonoBehaviour
         // rotation = Quaternion.Euler(rotation.eulerAngles.x, rotation.eulerAngles.y, leanAmount);
         t.rotation = rotation;
 
-        var camTransform = cam.transform;
-        camTransform.position = new Vector3(position.x, camTransform.position.y, position.z);
+        Transform camTransform = cam.transform;
+        Vector3 camPosition = new Vector3(position.x, camTransform.position.y, position.z);
+        float camHeight = cam.orthographicSize;
+        float camWidth = camHeight * cam.aspect;
+        float clampedX = Mathf.Clamp(camPosition.x, -MapManager.Instance.MapWidth * 5 + camWidth, MapManager.Instance.MapWidth * 5 - camWidth);
+        float clampedZ = Mathf.Clamp(camPosition.z, -MapManager.Instance.MapHeight * 5 + camHeight, MapManager.Instance.MapHeight * 5 - camHeight);
+        camPosition = new Vector3(clampedX, camPosition.y, clampedZ);
+        camTransform.position = camPosition;
 
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
             ThrowOutParcel();
