@@ -6,7 +6,7 @@ public class TruckManager : MonoBehaviour
 
     private static Camera cam => Camera.main;
 
-    [SerializeField] private Transform parcelContainer;
+    [SerializeField] private Transform parcelsContainer;
     [SerializeField] private Rigidbody parcelPrefab;
     [SerializeField] private float moveSpeed = 10;
     [SerializeField] private float maxSpeed = 20;
@@ -28,7 +28,7 @@ public class TruckManager : MonoBehaviour
     private void ThrowOutParcel()
     {
         var t = transform;
-        Rigidbody parcel = Instantiate(parcelPrefab, t.position - t.forward * (t.localScale.z + parcelPrefab.transform.localScale.z / 50) / 2, Quaternion.identity, parcelContainer);
+        Rigidbody parcel = Instantiate(parcelPrefab, t.position - t.forward * (t.localScale.z + parcelPrefab.transform.localScale.z / 50) / 2, Quaternion.identity, parcelsContainer);
         parcel.transform.rotation = t.rotation * parcelPrefab.transform.rotation;
         
         float randomRotationSpeed = Random.Range(0, maxParcelRotationSpeed);
