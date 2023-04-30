@@ -10,10 +10,12 @@ public class MapManager : MonoBehaviour
     [SerializeField] private Tilemap terrainMap;
     [SerializeField] private Tilemap roadMap;
     [SerializeField] private Transform entitiesContainer;
+    [SerializeField] private Transform parcelsContainer;
     [SerializeField] private HouseController[] housePrefabs;
     [SerializeField] private TargetController[] targetPrefabs;
     [SerializeField] private int levelIndex;
 
+    public LevelHolder Level { get; private set; }
     public int MapWidth { get; private set; } = 16;
     public int MapHeight { get; private set; } = 16;
     public List<TargetController> Targets => entitiesContainer.GetComponentsInChildren<TargetController>().ToList();
@@ -99,23 +101,37 @@ public class MapManager : MonoBehaviour
             entities.Add(entity);
         foreach (Transform entity in entities)
             DestroyImmediate(entity.gameObject);
-    }
-
-    public void Load(int levelIndex)
-    {
-        this.levelIndex = levelIndex;
-        Load();
+        var parcels = new List<Transform>();
+        foreach (Transform parcel in parcelsContainer)
+            parcels.Add(parcel);
+        foreach (Transform parcel in parcels)
+            DestroyImmediate(parcel.gameObject);
     }
 
     [ContextMenu("Load")]
     public void Load()
     {
-        Clear();
+        Load(levelIndex);
+    }
+
+    public void Load(int levelIndex)
+    {
+        _ = DialogManager.Instance.Hide();
         var level = Resources.FindObjectsOfTypeAll<LevelHolder>().FirstOrDefault(l => l.Index == levelIndex);
         if (level == null)
             level = Resources.Load<LevelHolder>($"Levels/Level{levelIndex}");
+        Level = level;
         if (level == null)
+        {
+            if (levelIndex <= 0)
+                return;
+            Load(levelIndex - 1);
+            _ = DialogManager.Instance.EndOfGameDialog();
             return;
+        }
+
+        Clear();
+        this.levelIndex = levelIndex;
         foreach (var tile in level.Tiles)
         {
             if (tile.Type >= TileType.Road)
@@ -152,6 +168,10 @@ public class MapManager : MonoBehaviour
             // e.Mirrored = entity.Mirrored;
         }
 
+        TruckManager.Instance.MaxSpeed = level.TruckSpeed;
+        if (level.Index == 1)
+            _ = DialogManager.Instance.FasterTruckDialog();
+
         var truckTransform = TruckManager.Instance.transform;
         truckTransform.localPosition = new Vector3(7, 1.2f, -90);
         truckTransform.localRotation = Quaternion.identity;
@@ -167,5 +187,15 @@ public class MapManager : MonoBehaviour
             return;
         Matrix4x4 rotationMatrix = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0, 0, 90 * rotation), Vector3.one);
         tilemap.SetTransformMatrix(position, rotationMatrix);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.PageUp))
+            Load(levelIndex + 1);
+        if (Input.GetKeyDown(KeyCode.PageDown))
+            Load(levelIndex - 1);
+        if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.R))
+            Load(levelIndex);
     }
 }

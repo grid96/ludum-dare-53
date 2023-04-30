@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Level0
   m_EditorClassIdentifier: 
   Index: 0
+  TruckSpeed: 12
+  TargetTimes:
+  - 90
+  - 60
   Tiles:
   - Type: 1
     Tile: {fileID: 11400000, guid: c415cf3ce258d8d489b67ab174e296be, type: 2}

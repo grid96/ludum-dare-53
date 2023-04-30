@@ -19,6 +19,12 @@ public class TruckManager : MonoBehaviour
     private Rigidbody rb;
     private float driftAmount;
 
+    public float MaxSpeed
+    {
+        get => maxSpeed;
+        set => maxSpeed = value;
+    }
+
     public TruckManager() => Instance = this;
 
     private void Start()
@@ -39,6 +45,9 @@ public class TruckManager : MonoBehaviour
 
         parcel.AddForce(-transform.right * driftAmount * -10, ForceMode.VelocityChange);
         parcel.AddForce(-t.forward * 5, ForceMode.VelocityChange);
+
+        if (parcelsContainer.childCount + ProgressManager.Instance.Progress == 100)
+            _ = DialogManager.Instance.ManyParcelsDialog();
 
         ProgressManager.Instance.StartCooldown();
     }
@@ -76,8 +85,11 @@ public class TruckManager : MonoBehaviour
         camPosition = new Vector3(clampedX, camPosition.y, clampedZ);
         camTransform.position = camPosition;
 
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !ProgressManager.Instance.OnCooldown && !DialogManager.Instance.IsShown && !ScoringManager.Instance.IsShown)
-            ThrowOutParcel();
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !DialogManager.Instance.IsShown && !ScoringManager.Instance.IsShown)
+            if (!ProgressManager.Instance.OnCooldown)
+                ThrowOutParcel();
+            else
+                _ = DialogManager.Instance.ParcelCooldownDialog();
     }
 
     private void FixedUpdate()

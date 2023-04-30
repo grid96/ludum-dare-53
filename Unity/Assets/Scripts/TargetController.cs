@@ -21,7 +21,7 @@ public class TargetController : EntityController
     
     private void Update()
     {
-        var parcel = colliders.FirstOrDefault(c => c.GetComponent<ParcelController>() && c.GetComponent<Rigidbody>()?.velocity.magnitude < 0.001f);
+        var parcel = colliders.FirstOrDefault(c => c.GetComponent<ParcelController>() && c.GetComponent<Rigidbody>()?.velocity.magnitude < 0.01f);
         if (parcel == null)
             return;
         ProgressManager.Instance.MakeProgress();

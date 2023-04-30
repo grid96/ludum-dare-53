@@ -6,6 +6,8 @@ using UnityEngine;
 public class LevelHolder : ScriptableObject
 {
     public int Index;
+    public float TruckSpeed = 20;
+    public float[] TargetTimes = new float[2];
     public List<TileData> Tiles;
     public List<EntityData> Entities;
 

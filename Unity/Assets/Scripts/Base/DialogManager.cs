@@ -31,7 +31,8 @@ public partial class DialogManager : MonoBehaviour
 
     private async UniTask ShowMessage(RuntimeAnimatorController avatar, string message)
     {
-        await Show();
+        if (!IsShown)
+            await Show();
         messageQueue.Enqueue((avatar, message));
         if (isTyping)
             return;
@@ -70,13 +71,14 @@ public partial class DialogManager : MonoBehaviour
     }
 
     private async UniTask Show() => await AnimateShown(true);
-    private async UniTask Hide() => await AnimateShown(false);
+    public async UniTask Hide() => await AnimateShown(false);
 
     private async UniTask AnimateShown(bool shown)
     {
         if (shown == IsShown)
             return;
         IsShown = shown;
+        messageText.text = "";
         positionTween?.Kill(true);
         var tcs = new UniTaskCompletionSource<bool>();
         positionTween = transform.ToRect().DOAnchorPos(shown ? shownPosition : hiddenPosition, 0.5f).OnComplete(() => tcs.TrySetResult(true));
