@@ -10,7 +10,8 @@ public class IntroManager : MonoBehaviour
     
     private async void Init()
     {
+        MapManager.Instance.Load(0);
         await GridGamesIntroManager.Instance.Play();
-        await DialogManager.Instance.TestDialog();
+        // await DialogManager.Instance.TestDialog();
     }
 }

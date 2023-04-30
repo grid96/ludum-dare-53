@@ -24,6 +24,7 @@ public class TargetController : EntityController
         var parcel = colliders.FirstOrDefault(c => c.GetComponent<ParcelController>() && c.GetComponent<Rigidbody>()?.velocity.magnitude < 0.001f);
         if (parcel == null)
             return;
+        ProgressManager.Instance.MakeProgress();
         colliders.Remove(parcel);
         Destroy(parcel.gameObject);
         Destroy(gameObject);

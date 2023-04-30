@@ -101,11 +101,19 @@ public class MapManager : MonoBehaviour
             DestroyImmediate(entity.gameObject);
     }
 
+    public void Load(int levelIndex)
+    {
+        this.levelIndex = levelIndex;
+        Load();
+    }
+
     [ContextMenu("Load")]
     public void Load()
     {
         Clear();
         var level = Resources.FindObjectsOfTypeAll<LevelHolder>().FirstOrDefault(l => l.Index == levelIndex);
+        if (level == null)
+            level = Resources.Load<LevelHolder>($"Levels/Level{levelIndex}");
         if (level == null)
             return;
         foreach (var tile in level.Tiles)
@@ -143,8 +151,14 @@ public class MapManager : MonoBehaviour
             // e.Rotation = entity.Rotation;
             // e.Mirrored = entity.Mirrored;
         }
-        
+
+        var truckTransform = TruckManager.Instance.transform;
+        truckTransform.localPosition = new Vector3(7, 1.2f, -90);
+        truckTransform.localRotation = Quaternion.identity;
+
         MiniMapManager.Instance.Generate();
+
+        ProgressManager.Instance.Init(level.Entities.Count(e => e.Type == EntityType.Target));
     }
 
     public void RotateTile(Tilemap tilemap, Vector3Int position, int rotation)

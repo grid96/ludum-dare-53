@@ -38,6 +38,7 @@ public class MiniMapManager : MonoBehaviour
             entities.Add(entity);
         foreach (Transform entity in entities)
             DestroyImmediate(entity.gameObject);
+        targets.Clear();
         foreach (var target in MapManager.Instance.Targets)
         {
             var targetObject = Instantiate(targetPrefab, entitiesContainer);
@@ -46,6 +47,8 @@ public class MiniMapManager : MonoBehaviour
             targetObject.transform.localPosition = targetPosition;
             targets.Add(target, targetObject);
         }
+        
+        Update();
     }
 
     private void Update()

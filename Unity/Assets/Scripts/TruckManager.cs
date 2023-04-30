@@ -17,6 +17,7 @@ public class TruckManager : MonoBehaviour
     // [SerializeField] private float leanFactor = 0.2f;
 
     private Rigidbody rb;
+    private float driftAmount;
 
     public TruckManager() => Instance = this;
 
@@ -36,9 +37,10 @@ public class TruckManager : MonoBehaviour
         Vector3 randomDirection = Random.insideUnitSphere;
         parcel.angularVelocity = randomDirection * randomRotationSpeed;
 
-        Vector3 right = transform.right;
-        float driftAmount = Vector3.Dot(rb.velocity, right) * driftFactor;
-        parcel.AddForce(-right * driftAmount - t.forward * 10f, ForceMode.VelocityChange);
+        parcel.AddForce(-transform.right * driftAmount * -10, ForceMode.VelocityChange);
+        parcel.AddForce(-t.forward * 5, ForceMode.VelocityChange);
+        
+        ProgressManager.Instance.StartCooldown();
     }
 
     private void Update()
@@ -74,7 +76,7 @@ public class TruckManager : MonoBehaviour
         camPosition = new Vector3(clampedX, camPosition.y, clampedZ);
         camTransform.position = camPosition;
 
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !DialogManager.Instance.IsShown)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !ProgressManager.Instance.OnCooldown && !DialogManager.Instance.IsShown)
             ThrowOutParcel();
     }
 
@@ -86,7 +88,7 @@ public class TruckManager : MonoBehaviour
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 
         Vector3 right = transform.right;
-        float driftAmount = Vector3.Dot(rb.velocity, right) * driftFactor;
+        driftAmount = Vector3.Dot(rb.velocity, right) * driftFactor;
         rb.AddForce(-right * driftAmount, ForceMode.VelocityChange);
     }
 }
