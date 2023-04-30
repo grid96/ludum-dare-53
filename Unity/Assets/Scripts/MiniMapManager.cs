@@ -33,8 +33,11 @@ public class MiniMapManager : MonoBehaviour
             texture.SetPixel(x, y, tilemap.GetTile(new Vector3Int(x - 8, y - 8)) == null ? emptyColor : filledColor);
         texture.Apply();
         rawImage.texture = texture;
-        foreach (var target in targets.Values)
-            Destroy(target);
+        var entities = new List<Transform>();
+        foreach (Transform entity in entitiesContainer)
+            entities.Add(entity);
+        foreach (Transform entity in entities)
+            DestroyImmediate(entity.gameObject);
         foreach (var target in MapManager.Instance.Targets)
         {
             var targetObject = Instantiate(targetPrefab, entitiesContainer);
