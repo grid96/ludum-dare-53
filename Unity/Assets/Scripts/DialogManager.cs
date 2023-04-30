@@ -15,7 +15,7 @@
             await ClickToContinue();
             await ShowMessage(avatar, "Time is money so we have to be quick. I'll be at the back getting the right parcel.");
             await ClickToContinue();
-            await ShowMessage(avatar, "When we are at our destination just give me a sign and \n... you know ...");
+            await ShowMessage(avatar, "When we are at our destination just give me a sign and ... \nyou know ...");
             await ClickToContinue();
             await ShowMessage(avatar, "I'll give it a shove!");
             await ClickToContinue();
