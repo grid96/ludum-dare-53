@@ -1,3 +1,4 @@
+using CarterGames.Assets.AudioManager;
 using TMPro;
 using UnityEngine;
 
@@ -14,9 +15,12 @@ public class ScoringManager : MonoBehaviour
     public bool IsShown { get; private set; }
 
     public ScoringManager() => Instance = this;
+    
+    private float time;
 
     public void Show(float time)
     {
+        this.time = time;
         IsShown = true;
         timeText.text = ToTimeString(time);
         float personalBest = PlayerPrefs.GetFloat($"PersonalBestLevel{MapManager.Instance.Level}", float.MaxValue);
@@ -56,6 +60,12 @@ public class ScoringManager : MonoBehaviour
     {
         Hide();
         MapManager.Instance.Load(MapManager.Instance.Level.Index + 1);
+    }
+
+    public void PlaySound(int index)
+    {
+        if (index == 0 || time <= MapManager.Instance.Level.TargetTimes[index - 1])
+            AudioManager.instance.Play("Scoring", 0.75f, Random.Range(0.9f, 1.1f));
     }
 
     public static string ToTimeString(float seconds) => $"{(int)seconds:00}:{(int)(seconds % 1 * 100):00}";

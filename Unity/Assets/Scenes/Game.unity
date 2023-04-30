@@ -264,18 +264,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20023413}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 529366752}
-  m_Father: {fileID: 217423267}
-  m_RootOrder: 5
+  m_Father: {fileID: 1910944289}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26, y: -40}
+  m_AnchoredPosition: {x: 26, y: -14.999981}
   m_SizeDelta: {x: 48, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20023415
@@ -1383,7 +1383,8 @@ MonoBehaviour:
   maxSpeed: 20
   rotationSpeed: 180
   maxParcelRotationSpeed: 10
-  driftFactor: 0.2
+  driftFactor: 1
+  driftThreshold: 1
 --- !u!1 &76144350
 GameObject:
   m_ObjectHideFlags: 0
@@ -3924,7 +3925,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b1db5b0c739f90947b49dde6691e466e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5db52c485ef952c4b901105018ae84d6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4928,8 +4929,6 @@ RectTransform:
   - {fileID: 1087936554}
   - {fileID: 306859047}
   - {fileID: 1910944289}
-  - {fileID: 1401334099}
-  - {fileID: 20023414}
   m_Father: {fileID: 1338711721}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16077,7 +16076,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!1 &1103286718
 GameObject:
@@ -23846,18 +23845,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401334098}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1468170205}
-  m_Father: {fileID: 217423267}
-  m_RootOrder: 4
+  m_Father: {fileID: 1910944289}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26, y: -40}
+  m_AnchoredPosition: {x: -26, y: -14.999981}
   m_SizeDelta: {x: 48, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401334100
@@ -31360,7 +31359,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1401334099}
+  - {fileID: 20023414}
   m_Father: {fileID: 217423267}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31478,7 +31479,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!1 &1923784781
 GameObject:

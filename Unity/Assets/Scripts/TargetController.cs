@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using CarterGames.Assets.AudioManager;
 using UnityEngine;
 
 public class TargetController : EntityController
@@ -25,6 +26,7 @@ public class TargetController : EntityController
         if (parcel == null)
             return;
         ProgressManager.Instance.MakeProgress();
+        AudioManager.instance.Play("Target", 0.75f, Random.Range(0.9f, 1.1f));
         colliders.Remove(parcel);
         Destroy(parcel.gameObject);
         Destroy(gameObject);

@@ -1,3 +1,4 @@
+using CarterGames.Assets.AudioManager;
 using UnityEngine;
 
 public class TruckManager : MonoBehaviour
@@ -14,6 +15,7 @@ public class TruckManager : MonoBehaviour
     [SerializeField] private float maxParcelRotationSpeed = 10;
 
     [SerializeField] private float driftFactor = 0.1f;
+    [SerializeField] private float driftThreshold = 1.0f;
     // [SerializeField] private float leanFactor = 0.2f;
 
     private Rigidbody rb;
@@ -43,13 +45,15 @@ public class TruckManager : MonoBehaviour
         Vector3 randomDirection = Random.insideUnitSphere;
         parcel.angularVelocity = randomDirection * randomRotationSpeed;
 
-        parcel.AddForce(-transform.right * driftAmount * -10, ForceMode.VelocityChange);
-        parcel.AddForce(-t.forward * 5, ForceMode.VelocityChange);
+        // parcel.AddForce(-transform.right * driftAmount * -10, ForceMode.VelocityChange);
+        parcel.AddForce(-t.forward * 10, ForceMode.VelocityChange);
 
         if (parcelsContainer.childCount + ProgressManager.Instance.Progress == 100)
             _ = DialogManager.Instance.ManyParcelsDialog();
 
         ProgressManager.Instance.StartCooldown();
+        
+        AudioManager.instance.Play("Throw", 0.5f, Random.Range(0.9f, 1.1f));
     }
 
     private void Update()
@@ -91,6 +95,22 @@ public class TruckManager : MonoBehaviour
             else
                 _ = DialogManager.Instance.ParcelCooldownDialog();
     }
+    
+    /*private void FixedUpdate()
+    {
+        float moveAmount = moveSpeed * Time.fixedDeltaTime;
+        if (!ScoringManager.Instance.IsShown)
+            rb.AddForce(transform.forward * moveAmount, ForceMode.VelocityChange);
+
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
+
+        Vector3 right = transform.right;
+        float currentSpeed = rb.velocity.magnitude;
+        float dotProduct = Vector3.Dot(rb.velocity.normalized, right);
+        driftAmount = Mathf.Abs(dotProduct) > driftThreshold ? dotProduct * driftFactor : 0;
+
+        rb.AddForce(-right * driftAmount, ForceMode.VelocityChange);
+    }*/
 
     private void FixedUpdate()
     {

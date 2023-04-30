@@ -1,3 +1,4 @@
+using CarterGames.Assets.AudioManager;
 using TMPro;
 using UnityEngine;
 
@@ -21,7 +22,7 @@ public class ProgressManager : MonoBehaviour
     private float timer;
     private int progress;
     private int total;
-    
+
     public int Progress => progress;
 
     public void Init(int total)
@@ -69,6 +70,9 @@ public class ProgressManager : MonoBehaviour
         cooldown -= Time.deltaTime;
         cooldownBar.localScale = new Vector3(cooldown / cooldownAmount, 1, 1);
         if (!OnCooldown)
+        {
+            AudioManager.instance.Play("Cooldown", 0.125f);
             ResetCooldown();
+        }
     }
 }

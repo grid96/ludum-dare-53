@@ -24,4 +24,10 @@ MonoBehaviour:
   - key: Theme
     value: {fileID: 8300000, guid: b1db5b0c739f90947b49dde6691e466e, type: 3}
   - key: Beep
-    value: {fileID: 8300000, guid: c66766e1d8c808a42a2812f1225ce9ce, type: 3}
+    value: {fileID: 8300000, guid: fdba660aa7ce2424484bce763fa17dad, type: 3}
+  - key: Scoring
+    value: {fileID: 8300000, guid: 6613c823954978747a8087a59990c86d, type: 3}
+  - key: Target
+    value: {fileID: 8300000, guid: 5db52c485ef952c4b901105018ae84d6, type: 3}
+  - key: Throw
+    value: {fileID: 8300000, guid: 3d3c03acbe5e32c478951a906fdefa8a, type: 3}
