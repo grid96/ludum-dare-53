@@ -16,6 +16,7 @@ public class MapManager : MonoBehaviour
 
     public int MapWidth { get; private set; } = 16;
     public int MapHeight { get; private set; } = 16;
+    public List<TargetController> Targets => entitiesContainer.GetComponentsInChildren<TargetController>().ToList();
 
     public MapManager() => Instance = this;
 
@@ -142,6 +143,8 @@ public class MapManager : MonoBehaviour
             // e.Rotation = entity.Rotation;
             // e.Mirrored = entity.Mirrored;
         }
+        
+        MiniMapManager.Instance.Generate();
     }
 
     public void RotateTile(Tilemap tilemap, Vector3Int position, int rotation)

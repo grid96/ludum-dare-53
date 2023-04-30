@@ -23,6 +23,7 @@ public class TruckManager : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void ThrowOutParcel()
@@ -30,7 +31,7 @@ public class TruckManager : MonoBehaviour
         var t = transform;
         Rigidbody parcel = Instantiate(parcelPrefab, t.position - t.forward * (t.localScale.z + parcelPrefab.transform.localScale.z / 50) / 2, Quaternion.identity, parcelsContainer);
         parcel.transform.rotation = t.rotation * parcelPrefab.transform.rotation;
-        
+
         float randomRotationSpeed = Random.Range(0, maxParcelRotationSpeed);
         Vector3 randomDirection = Random.insideUnitSphere;
         parcel.angularVelocity = randomDirection * randomRotationSpeed;
@@ -73,7 +74,7 @@ public class TruckManager : MonoBehaviour
         camPosition = new Vector3(clampedX, camPosition.y, clampedZ);
         camTransform.position = camPosition;
 
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !DialogManager.Instance.IsShown)
             ThrowOutParcel();
     }
 

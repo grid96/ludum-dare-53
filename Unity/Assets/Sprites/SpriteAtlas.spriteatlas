@@ -74,6 +74,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 6abcad77ce7b0514f9aaf89eeca2604e, type: 3}
   - {fileID: 21300000, guid: 698cb9e919001064fab3bbcfbc90993e, type: 3}
   - {fileID: 21300000, guid: ed3d90ba46e4041469a08e0c593b5298, type: 3}
+  - {fileID: 21300000, guid: cf9428babe452e44497c15c70f25fb6d, type: 3}
   - {fileID: 21300000, guid: 059c104bb15ca794ab5a0b1a1dfdddfe, type: 3}
   - {fileID: 21300000, guid: d2498d1cc0259a04e9d44ee7cdfcb90e, type: 3}
   - {fileID: 21300000, guid: 63ca1ecc0bea07942adcea6a7d24484c, type: 3}
@@ -107,6 +108,7 @@ SpriteAtlas:
   - RoofTop
   - RoofRight
   - Icon
+  - Truck
   - Roof
   - RoadTurn
   - Road

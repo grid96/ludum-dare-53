@@ -24,8 +24,8 @@ public partial class DialogManager : MonoBehaviour
     private readonly Queue<(RuntimeAnimatorController avatar, string message)> messageQueue = new();
     private bool isTyping;
     private Tween positionTween;
-    private bool isShown;
     private event EventHandler clicked;
+    public bool IsShown { get; private set; }
 
     public DialogManager() => Instance = this;
 
@@ -74,9 +74,9 @@ public partial class DialogManager : MonoBehaviour
 
     private async UniTask AnimateShown(bool shown)
     {
-        if (shown == isShown)
+        if (shown == IsShown)
             return;
-        isShown = shown;
+        IsShown = shown;
         positionTween?.Kill(true);
         var tcs = new UniTaskCompletionSource<bool>();
         positionTween = transform.ToRect().DOAnchorPos(shown ? shownPosition : hiddenPosition, 0.5f).OnComplete(() => tcs.TrySetResult(true));
