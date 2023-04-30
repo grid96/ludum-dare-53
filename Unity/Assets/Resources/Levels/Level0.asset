@@ -1640,9 +1640,9 @@ MonoBehaviour:
     Rotation: 1
     Mirrored: 0
   - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
     Position: {x: -5, y: 0, z: 0}
-    Rotation: 0
+    Rotation: 1
     Mirrored: 0
   - Type: 102
     Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
@@ -1763,60 +1763,72 @@ MonoBehaviour:
   - Type: 1
     Position: {x: -42, y: 2, z: -5}
     VariantIndex: 2
+    IsSprite: 0
     Rotation: 90
     Mirrored: 0
   - Type: 1
     Position: {x: 15, y: 2, z: -9}
     VariantIndex: 3
+    IsSprite: 0
     Rotation: 90
     Mirrored: 0
   - Type: 1
     Position: {x: 30, y: 2, z: -15}
     VariantIndex: 3
+    IsSprite: 0
     Rotation: 0
     Mirrored: 0
   - Type: 1
     Position: {x: -21, y: 2, z: 25}
     VariantIndex: 3
+    IsSprite: 0
     Rotation: 0
     Mirrored: 0
   - Type: 1
     Position: {x: 33, y: 2, z: 10}
     VariantIndex: 4
+    IsSprite: 0
     Rotation: 90
     Mirrored: 0
   - Type: 1
     Position: {x: 17, y: 2, z: 10}
     VariantIndex: 4
+    IsSprite: 0
     Rotation: 90
     Mirrored: 0
   - Type: 1
     Position: {x: -25, y: 2, z: 0}
     VariantIndex: 0
+    IsSprite: 0
     Rotation: 30.000008
     Mirrored: 0
   - Type: 1
     Position: {x: -6, y: 2, z: 18}
     VariantIndex: 2
-    Rotation: 345
+    IsSprite: 0
+    Rotation: 344.99997
     Mirrored: 0
   - Type: 1
     Position: {x: -7, y: 2, z: -1}
     VariantIndex: 1
+    IsSprite: 0
     Rotation: 90
     Mirrored: 0
   - Type: 1
     Position: {x: -25, y: 2, z: -29}
     VariantIndex: 3
+    IsSprite: 0
     Rotation: 90
     Mirrored: 0
   - Type: 1
     Position: {x: -11, y: 2, z: -35}
     VariantIndex: 3
+    IsSprite: 0
     Rotation: 0
     Mirrored: 0
-  - Type: 1
+  - Type: 0
     Position: {x: -20, y: 0, z: 10}
     VariantIndex: 0
+    IsSprite: 1
     Rotation: 0
     Mirrored: 0

@@ -33,6 +33,7 @@ public class EntityData
     public EntityType Type;
     public Vector3 Position;
     public int VariantIndex;
+    public bool IsSprite;
     public float Rotation;
     public bool Mirrored;
 }

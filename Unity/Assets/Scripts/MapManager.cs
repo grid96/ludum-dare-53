@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -71,14 +72,15 @@ public class MapManager : MonoBehaviour
         var entities = new List<EntityData>();
         foreach (Transform entity in entitiesContainer)
         {
-            var houseController = entity.GetComponent<EntityController>();
+            var entityController = entity.GetComponent<EntityController>();
             var entityData = new EntityData
             {
-                Type = EntityType.House,
+                Type = entityController.Type,
                 Position = entity.position,
-                VariantIndex = houseController.VariantIndex,
-                Rotation = houseController.Rotation,
-                Mirrored = houseController.Mirrored
+                VariantIndex = entityController.VariantIndex,
+                IsSprite = entityController.IsSprite,
+                Rotation = entityController.Rotation,
+                Mirrored = entityController.Mirrored
             };
             entities.Add(entityData);
         }
@@ -91,7 +93,10 @@ public class MapManager : MonoBehaviour
     {
         terrainMap.ClearAllTiles();
         roadMap.ClearAllTiles();
+        var entities = new List<Transform>();
         foreach (Transform entity in entitiesContainer)
+            entities.Add(entity);
+        foreach (Transform entity in entities)
             DestroyImmediate(entity.gameObject);
     }
 
@@ -99,15 +104,21 @@ public class MapManager : MonoBehaviour
     public void Load()
     {
         Clear();
-        var level = Resources.Load<LevelHolder>($"Levels/Level{levelIndex}.asset");
+        var level = Resources.FindObjectsOfTypeAll<LevelHolder>().FirstOrDefault(l => l.Index == levelIndex);
         if (level == null)
             return;
         foreach (var tile in level.Tiles)
         {
             if (tile.Type >= TileType.Road)
+            {
                 roadMap.SetTile(tile.Position, tile.Tile);
+                RotateTile(roadMap, tile.Position, tile.Rotation);
+            }
             else
+            {
                 terrainMap.SetTile(tile.Position, tile.Tile);
+                RotateTile(terrainMap, tile.Position, tile.Rotation);
+            }
         }
 
         foreach (var entity in level.Entities)
@@ -123,10 +134,21 @@ public class MapManager : MonoBehaviour
                     break;
             }
 
-            EntityController e = Instantiate(prefab, entity.Position, Quaternion.Euler(0, entity.Rotation, 0), entitiesContainer);
+            if (prefab == null)
+                continue;
+
+            EntityController e = Instantiate(prefab, entity.Position, Quaternion.Euler(entity.IsSprite ? 90 : 0, entity.Rotation, 0), entitiesContainer);
             e.VariantIndex = entity.VariantIndex;
-            e.Rotation = entity.Rotation;
-            e.Mirrored = entity.Mirrored;
+            // e.Rotation = entity.Rotation;
+            // e.Mirrored = entity.Mirrored;
         }
+    }
+
+    public void RotateTile(Tilemap tilemap, Vector3Int position, int rotation)
+    {
+        if (!tilemap.HasTile(position))
+            return;
+        Matrix4x4 rotationMatrix = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0, 0, 90 * rotation), Vector3.one);
+        tilemap.SetTransformMatrix(position, rotationMatrix);
     }
 }

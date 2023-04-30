@@ -4,6 +4,7 @@ public class EntityController : MonoBehaviour
 {
     public EntityType Type;
     public int VariantIndex;
+    public bool IsSprite;
 
     public float Rotation
     {
