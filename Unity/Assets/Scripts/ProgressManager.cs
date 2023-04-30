@@ -32,6 +32,8 @@ public class ProgressManager : MonoBehaviour
         progress++;
         progressText.text = $"<cspace=-0.4em><voffset=.4em>{progress}<size=120%><voffset=0em>/<size=100%><voffset=-.4em>{total}";
         ResetCooldown();
+        if (progress == total)
+            ScoringManager.Instance.Show(Time.timeSinceLevelLoad);
     }
 
     public void StartCooldown()

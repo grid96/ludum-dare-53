@@ -39,7 +39,7 @@ public class TruckManager : MonoBehaviour
 
         parcel.AddForce(-transform.right * driftAmount * -10, ForceMode.VelocityChange);
         parcel.AddForce(-t.forward * 5, ForceMode.VelocityChange);
-        
+
         ProgressManager.Instance.StartCooldown();
     }
 
@@ -76,14 +76,15 @@ public class TruckManager : MonoBehaviour
         camPosition = new Vector3(clampedX, camPosition.y, clampedZ);
         camTransform.position = camPosition;
 
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !ProgressManager.Instance.OnCooldown && !DialogManager.Instance.IsShown)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !ProgressManager.Instance.OnCooldown && !DialogManager.Instance.IsShown && !ScoringManager.Instance.IsShown)
             ThrowOutParcel();
     }
 
     private void FixedUpdate()
     {
         float moveAmount = moveSpeed * Time.fixedDeltaTime;
-        rb.AddForce(transform.forward * moveAmount, ForceMode.VelocityChange);
+        if (!ScoringManager.Instance.IsShown)
+            rb.AddForce(transform.forward * moveAmount, ForceMode.VelocityChange);
 
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 
