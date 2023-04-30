@@ -4,9 +4,9 @@ using UnityEngine.Tilemaps;
 [CreateAssetMenu(fileName = "Tile", menuName = "Level/Tile", order = 1)]
 public class MapTile : Tile
 {
-    public TileType Type { get; set; }
-    public int Rotation { get; set; }
-    public bool Mirrored { get; set; }
+    public TileType Type;
+    public int Rotation;
+    public bool Mirrored;
 }
 
 public enum TileType

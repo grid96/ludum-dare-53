@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class LevelHolder : ScriptableObject
 {
-    public int Index { get; set; }
-    public List<TileData> Tiles { get; set; }
-    public List<EntityData> Entities { get; set; }
-    
+    public int Index;
+    public List<TileData> Tiles;
+    public List<EntityData> Entities;
+
     public void SaveAsset()
     {
         AssetDatabase.CreateAsset(this, $"Assets/Resources/Levels/Level{Index}.asset");
@@ -20,19 +20,19 @@ public class LevelHolder : ScriptableObject
 [Serializable]
 public class TileData
 {
-    public TileType Type { get; set; }
-    public MapTile Tile { get; set; }
-    public Vector3Int Position { get; set; }
-    public int Rotation { get; set; }
-    public bool Mirrored { get; set; }
+    public TileType Type;
+    public MapTile Tile;
+    public Vector3Int Position;
+    public int Rotation;
+    public bool Mirrored;
 }
 
 [Serializable]
 public class EntityData
 {
-    public EntityType Type { get; set; }
-    public Vector3 Position { get; set; }
-    public int VariantIndex { get; set; }
-    public float Rotation { get; set; }
-    public bool Mirrored { get; set; }
+    public EntityType Type;
+    public Vector3 Position;
+    public int VariantIndex;
+    public float Rotation;
+    public bool Mirrored;
 }

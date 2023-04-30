@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class EntityController : MonoBehaviour
 {
-    public EntityType Type { get; set; }
-    public int VariantIndex { get; set; }
+    public EntityType Type;
+    public int VariantIndex;
 
     public float Rotation
     {

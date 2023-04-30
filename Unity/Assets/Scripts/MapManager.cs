@@ -71,7 +71,7 @@ public class MapManager : MonoBehaviour
         var entities = new List<EntityData>();
         foreach (Transform entity in entitiesContainer)
         {
-            var houseController = entity.GetComponent<HouseController>();
+            var houseController = entity.GetComponent<EntityController>();
             var entityData = new EntityData
             {
                 Type = EntityType.House,

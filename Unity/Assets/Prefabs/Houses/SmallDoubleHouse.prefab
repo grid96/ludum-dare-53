@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallDoubleHouse
       objectReference: {fileID: 0}
+    - target: {fileID: 6551548350978334286, guid: e612fa71fabe65a4187422a6d97e0154, type: 3}
+      propertyPath: VariantIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6659336113509084759, guid: e612fa71fabe65a4187422a6d97e0154, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.75
