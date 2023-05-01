@@ -25,6 +25,8 @@ MonoBehaviour:
     value: {fileID: 8300000, guid: b1db5b0c739f90947b49dde6691e466e, type: 3}
   - key: Beep
     value: {fileID: 8300000, guid: fdba660aa7ce2424484bce763fa17dad, type: 3}
+  - key: Cooldown
+    value: {fileID: 8300000, guid: b968275cee128ac49919d18acd9f9ed4, type: 3}
   - key: Scoring
     value: {fileID: 8300000, guid: 6613c823954978747a8087a59990c86d, type: 3}
   - key: Target

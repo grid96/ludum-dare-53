@@ -94,7 +94,6 @@ public class MapManager : MonoBehaviour
     [ContextMenu("Clear")]
     public void Clear()
     {
-        terrainMap.ClearAllTiles();
         roadMap.ClearAllTiles();
         var entities = new List<Transform>();
         foreach (Transform entity in entitiesContainer)
@@ -106,6 +105,12 @@ public class MapManager : MonoBehaviour
             parcels.Add(parcel);
         foreach (Transform parcel in parcels)
             DestroyImmediate(parcel.gameObject);
+    }
+
+    public void ClearAll()
+    {
+        terrainMap.ClearAllTiles();
+        Clear();
     }
 
     [ContextMenu("Load")]
@@ -130,7 +135,7 @@ public class MapManager : MonoBehaviour
             return;
         }
 
-        Clear();
+        ClearAll();
         this.levelIndex = levelIndex;
         foreach (var tile in level.Tiles)
         {
@@ -169,7 +174,7 @@ public class MapManager : MonoBehaviour
         }
 
         TruckManager.Instance.MaxSpeed = level.TruckSpeed;
-        if (level.Index == 1)
+        if (level.Index == 3)
             _ = DialogManager.Instance.FasterTruckDialog();
 
         var truckTransform = TruckManager.Instance.transform;
