@@ -15,8 +15,8 @@ public class IntroManager : MonoBehaviour
         MapManager.Instance.Load(0);
         await GridGamesIntroManager.Instance.Play();
         IsShown = false;
-#if !UNITY_EDITOR
+// #if !UNITY_EDITOR
         await DialogManager.Instance.WelcomeDialog();
-#endif
+// #endif
     }
 }

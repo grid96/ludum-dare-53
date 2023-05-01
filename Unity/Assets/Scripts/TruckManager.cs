@@ -89,7 +89,7 @@ public class TruckManager : MonoBehaviour
         camPosition = new Vector3(clampedX, camPosition.y, clampedZ);
         camTransform.position = camPosition;
 
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !DialogManager.Instance.IsShown && !ScoringManager.Instance.IsShown)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !DialogManager.Instance.IsShown && !ScoringManager.Instance.IsShown && !IntroManager.Instance.IsShown)
             if (!ProgressManager.Instance.OnCooldown)
                 ThrowOutParcel();
             else
