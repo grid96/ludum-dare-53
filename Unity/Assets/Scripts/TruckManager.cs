@@ -78,6 +78,7 @@ public class TruckManager : MonoBehaviour
         // var right = t.right;
         // float leanAmount = Vector3.Dot(rb.velocity, right) * leanFactor;
         // rotation = Quaternion.Euler(rotation.eulerAngles.x, rotation.eulerAngles.y, leanAmount);
+        Debug.Log(t.rotation.eulerAngles.y - rotation.eulerAngles.y);
         t.rotation = rotation;
 
         Transform camTransform = cam.transform;

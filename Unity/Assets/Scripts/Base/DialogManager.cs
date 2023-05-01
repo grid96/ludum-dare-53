@@ -11,6 +11,7 @@ public partial class DialogManager : MonoBehaviour
 {
     public static DialogManager Instance { get; private set; }
 
+    [SerializeField] private bool disableInEditor;
     [SerializeField] private Animator avatarAnimator;
     [SerializeField] private TMP_Text messageText;
     [SerializeField] private Vector2 shownPosition;
@@ -75,6 +76,10 @@ public partial class DialogManager : MonoBehaviour
 
     private async UniTask AnimateShown(bool shown)
     {
+#if UNITY_EDITOR
+        if (disableInEditor)
+            return;
+#endif
         if (shown == IsShown)
             return;
         IsShown = shown;
@@ -87,6 +92,10 @@ public partial class DialogManager : MonoBehaviour
 
     private async UniTask ClickToContinue()
     {
+#if UNITY_EDITOR
+        if (disableInEditor)
+            return;
+#endif
         var tcs = new UniTaskCompletionSource<bool>();
         void Handler(object sender, EventArgs e) => tcs.TrySetResult(true);
         clicked += Handler;

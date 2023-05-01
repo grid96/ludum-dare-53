@@ -38,7 +38,7 @@ public class ScoringManager : MonoBehaviour
         for (int i = 0; i < targetTimeTexts.Length; i++)
         {
             targetTimeTexts[i].text = $"< {ToTimeString(MapManager.Instance.Level.TargetTimes[i])}";
-            targetTimeTexts[i].gameObject.SetActive(i == 0 || time > MapManager.Instance.Level.TargetTimes[i]);
+            targetTimeTexts[i].gameObject.SetActive(time > MapManager.Instance.Level.TargetTimes[i]);
         }
 
         animator.Play("Scoring");

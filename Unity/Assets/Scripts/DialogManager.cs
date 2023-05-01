@@ -28,9 +28,6 @@ public partial class DialogManager
 
     public async UniTask ParcelCooldownDialog()
     {
-#if UNITY_EDITOR
-        return;
-#endif
         if (parcelCooldownDialogTriggered)
             return;
         parcelCooldownDialogTriggered = true;

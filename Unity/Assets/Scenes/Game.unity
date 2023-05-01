@@ -7250,6 +7250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5958d40ecb3693a4aad3c188bb4b254a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableInEditor: 1
   avatarAnimator: {fileID: 1730412263}
   messageText: {fileID: 1637597106}
   shownPosition: {x: 0, y: 10}
@@ -25082,7 +25083,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20, y: 0}
+  m_AnchoredPosition: {x: -22, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1459277057
@@ -25105,7 +25106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <cspace=-0.4em><voffset=.4em>0<size=120%><voffset=0em>/<size=100%><voffset=-.4em>7
+  m_text: <voffset=0.4em><cspace=-0.4em>0<size=120%><voffset=0em>/<size=100%><voffset=-0.4em>7
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ba7c99deb4cbaa840a05712cd9f84fa0, type: 2}
   m_sharedMaterial: {fileID: -4856709841621996897, guid: ba7c99deb4cbaa840a05712cd9f84fa0, type: 2}
@@ -25139,7 +25140,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 32
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -28263,7 +28264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: I'm Ricky, your new partner. I'll be helping you out with the deliveries.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ba7c99deb4cbaa840a05712cd9f84fa0, type: 2}
   m_sharedMaterial: {fileID: -4856709841621996897, guid: ba7c99deb4cbaa840a05712cd9f84fa0, type: 2}

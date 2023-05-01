@@ -36,7 +36,7 @@ public class ProgressManager : MonoBehaviour
     public void MakeProgress()
     {
         progress++;
-        progressText.text = $"<cspace=-0.4em><voffset=.4em>{progress}<size=120%><voffset=0em>/<size=100%><voffset=-.4em><cspace=0em>{total}";
+        progressText.text = $"<voffset=0.4em>{(progress >= 10 ? progress / 10 : "")}<cspace=-0.4em>{progress % 10}<size=120%><voffset=0em>/<size=100%><voffset=-0.4em><cspace=0em>{total}";
         ResetCooldown();
         if (progress == total)
             ScoringManager.Instance.Show(timer);
