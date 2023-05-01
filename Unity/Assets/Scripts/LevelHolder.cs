@@ -13,9 +13,11 @@ public class LevelHolder : ScriptableObject
 
     public void SaveAsset()
     {
+#if UNITY_EDITOR
         AssetDatabase.CreateAsset(this, $"Assets/Resources/Levels/Level{Index}.asset");
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
+#endif
     }
 }
 
