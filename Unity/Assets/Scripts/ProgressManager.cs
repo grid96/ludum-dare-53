@@ -36,7 +36,7 @@ public class ProgressManager : MonoBehaviour
     public void MakeProgress()
     {
         progress++;
-        progressText.text = $"<cspace=-0.4em><voffset=.4em>{progress}<size=120%><voffset=0em>/<size=100%><voffset=-.4em>{total}";
+        progressText.text = $"<cspace=-0.4em><voffset=.4em>{progress}<size=120%><voffset=0em>/<size=100%><voffset=-.4em><cspace=0em>{total}";
         ResetCooldown();
         if (progress == total)
             ScoringManager.Instance.Show(timer);
