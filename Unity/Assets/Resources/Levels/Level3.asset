@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b49666fe1dcc0b408d79e4ec7ae3c13, type: 3}
-  m_Name: Level2
+  m_Name: Level3
   m_EditorClassIdentifier: 
-  Index: 2
-  TruckSpeed: 15
+  Index: 3
+  TruckSpeed: 20
   TargetTimes:
-  - 90
   - 60
+  - 40
   Tiles:
   - Type: 1
     Tile: {fileID: 11400000, guid: c415cf3ce258d8d489b67ab174e296be, type: 2}
@@ -1473,26 +1473,6 @@ MonoBehaviour:
     Position: {x: 0, y: -8, z: 0}
     Rotation: 0
     Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 8db555b7e948f5342beb8fef891976fd, type: 2}
-    Position: {x: -6, y: -7, z: 0}
-    Rotation: 2
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -5, y: -7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -4, y: -7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
-    Position: {x: -3, y: -7, z: 0}
-    Rotation: 3
-    Mirrored: 0
   - Type: 101
     Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
     Position: {x: 0, y: -7, z: 0}
@@ -1500,212 +1480,207 @@ MonoBehaviour:
     Mirrored: 0
   - Type: 101
     Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: -6, y: -6, z: 0}
-    Rotation: 0
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
-    Position: {x: -3, y: -6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -2, y: -6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -1, y: -6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 52d9f15e03a655d4e8c344d6b775547f, type: 2}
     Position: {x: 0, y: -6, z: 0}
     Rotation: 0
     Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: -6, y: -5, z: 0}
-    Rotation: 0
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: -6, y: -4, z: 0}
-    Rotation: 0
-    Mirrored: 0
   - Type: 102
     Tile: {fileID: 11400000, guid: 8db555b7e948f5342beb8fef891976fd, type: 2}
-    Position: {x: -2, y: -4, z: 0}
+    Position: {x: -4, y: -5, z: 0}
     Rotation: 2
     Mirrored: 0
   - Type: 101
     Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -1, y: -4, z: 0}
+    Position: {x: -3, y: -5, z: 0}
     Rotation: 1
     Mirrored: 0
   - Type: 101
     Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: -2, y: -5, z: 0}
+    Rotation: 1
+    Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: -1, y: -5, z: 0}
+    Rotation: 1
+    Mirrored: 0
+  - Type: 103
+    Tile: {fileID: 11400000, guid: a9234189b87311d498efa0ce4cb9aca3, type: 2}
+    Position: {x: 0, y: -5, z: 0}
+    Rotation: 3
+    Mirrored: 0
+  - Type: 102
+    Tile: {fileID: 11400000, guid: 8db555b7e948f5342beb8fef891976fd, type: 2}
+    Position: {x: 2, y: -5, z: 0}
+    Rotation: 2
+    Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: 3, y: -5, z: 0}
+    Rotation: 1
+    Mirrored: 0
+  - Type: 105
+    Tile: {fileID: 11400000, guid: ffe264270022b854789630ad27651c22, type: 2}
+    Position: {x: 4, y: -5, z: 0}
+    Rotation: 3
+    Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
+    Position: {x: -4, y: -4, z: 0}
+    Rotation: 0
+    Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
     Position: {x: 0, y: -4, z: 0}
-    Rotation: 1
+    Rotation: 0
     Mirrored: 0
   - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 1, y: -4, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
     Position: {x: 2, y: -4, z: 0}
-    Rotation: 1
+    Rotation: 0
     Mirrored: 0
   - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 3, y: -4, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 4, y: -4, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
-    Position: {x: 5, y: -4, z: 0}
-    Rotation: 3
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
-    Position: {x: -6, y: -3, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -5, y: -3, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
+    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
     Position: {x: -4, y: -3, z: 0}
+    Rotation: 0
+    Mirrored: 0
+  - Type: 102
+    Tile: {fileID: 11400000, guid: 8db555b7e948f5342beb8fef891976fd, type: 2}
+    Position: {x: -2, y: -3, z: 0}
+    Rotation: 2
+    Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: -1, y: -3, z: 0}
+    Rotation: 1
+    Mirrored: 0
+  - Type: 104
+    Tile: {fileID: 11400000, guid: 961267184af328a429c14feb4dee8138, type: 2}
+    Position: {x: 0, y: -3, z: 0}
+    Rotation: 1
+    Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: 1, y: -3, z: 0}
+    Rotation: 1
+    Mirrored: 0
+  - Type: 103
+    Tile: {fileID: 11400000, guid: 3957ffd3df5890546b97bf4cfa1b4141, type: 2}
+    Position: {x: 2, y: -3, z: 0}
+    Rotation: 0
+    Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: 3, y: -3, z: 0}
+    Rotation: 1
+    Mirrored: 0
+  - Type: 102
+    Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
+    Position: {x: 4, y: -3, z: 0}
     Rotation: 3
     Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: -2, y: -3, z: 0}
-    Rotation: 0
+  - Type: 102
+    Tile: {fileID: 11400000, guid: 8db555b7e948f5342beb8fef891976fd, type: 2}
+    Position: {x: -6, y: -2, z: 0}
+    Rotation: 2
     Mirrored: 0
   - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: 5, y: -3, z: 0}
-    Rotation: 0
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: -5, y: -2, z: 0}
+    Rotation: 1
     Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
+  - Type: 103
+    Tile: {fileID: 11400000, guid: 3957ffd3df5890546b97bf4cfa1b4141, type: 2}
     Position: {x: -4, y: -2, z: 0}
     Rotation: 0
     Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: -3, y: -2, z: 0}
+    Rotation: 1
+    Mirrored: 0
   - Type: 102
-    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
+    Tile: {fileID: 11400000, guid: 52d9f15e03a655d4e8c344d6b775547f, type: 2}
     Position: {x: -2, y: -2, z: 0}
-    Rotation: 1
+    Rotation: 0
     Mirrored: 0
   - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -1, y: -2, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
     Position: {x: 0, y: -2, z: 0}
+    Rotation: 0
+    Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
+    Position: {x: 4, y: -2, z: 0}
+    Rotation: 0
+    Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
+    Position: {x: -6, y: -1, z: 0}
+    Rotation: 0
+    Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
+    Position: {x: 0, y: -1, z: 0}
+    Rotation: 0
+    Mirrored: 0
+  - Type: 105
+    Tile: {fileID: 11400000, guid: a1f0947a15b9ff745bb57a534218be83, type: 2}
+    Position: {x: 2, y: -1, z: 0}
     Rotation: 1
     Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
-    Position: {x: 1, y: -2, z: 0}
+  - Type: 101
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: 3, y: -1, z: 0}
+    Rotation: 1
+    Mirrored: 0
+  - Type: 103
+    Tile: {fileID: 11400000, guid: a9234189b87311d498efa0ce4cb9aca3, type: 2}
+    Position: {x: 4, y: -1, z: 0}
     Rotation: 3
     Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: 5, y: -2, z: 0}
-    Rotation: 0
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: -4, y: -1, z: 0}
-    Rotation: 0
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: 1, y: -1, z: 0}
-    Rotation: 0
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: 5, y: -1, z: 0}
-    Rotation: 0
-    Mirrored: 0
   - Type: 102
-    Tile: {fileID: 11400000, guid: 8db555b7e948f5342beb8fef891976fd, type: 2}
-    Position: {x: -7, y: 0, z: 0}
-    Rotation: 2
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
     Position: {x: -6, y: 0, z: 0}
     Rotation: 1
     Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: -5, y: 0, z: 0}
+    Rotation: 1
+    Mirrored: 0
   - Type: 102
     Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
-    Position: {x: -5, y: 0, z: 0}
+    Position: {x: -4, y: 0, z: 0}
     Rotation: 3
     Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
-    Position: {x: -4, y: 0, z: 0}
-    Rotation: 1
-    Mirrored: 0
   - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -3, y: 0, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -2, y: 0, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -1, y: 0, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
     Position: {x: 0, y: 0, z: 0}
+    Rotation: 0
+    Mirrored: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
+    Position: {x: 4, y: 0, z: 0}
+    Rotation: 0
+    Mirrored: 0
+  - Type: 103
+    Tile: {fileID: 11400000, guid: 5d2d7602f1cd13b4f93889d9b276cb13, type: 2}
+    Position: {x: -4, y: 1, z: 0}
     Rotation: 1
     Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 52d9f15e03a655d4e8c344d6b775547f, type: 2}
-    Position: {x: 1, y: 0, z: 0}
-    Rotation: 0
+  - Type: 101
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: -3, y: 1, z: 0}
+    Rotation: 1
     Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 8db555b7e948f5342beb8fef891976fd, type: 2}
-    Position: {x: 4, y: 0, z: 0}
-    Rotation: 2
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 52d9f15e03a655d4e8c344d6b775547f, type: 2}
-    Position: {x: 5, y: 0, z: 0}
-    Rotation: 0
+  - Type: 105
+    Tile: {fileID: 11400000, guid: ffe264270022b854789630ad27651c22, type: 2}
+    Position: {x: -2, y: 1, z: 0}
+    Rotation: 3
     Mirrored: 0
   - Type: 101
     Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: -7, y: 1, z: 0}
-    Rotation: 0
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: -5, y: 1, z: 0}
+    Position: {x: 0, y: 1, z: 0}
     Rotation: 0
     Mirrored: 0
   - Type: 101
@@ -1713,594 +1688,420 @@ MonoBehaviour:
     Position: {x: 4, y: 1, z: 0}
     Rotation: 0
     Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
-    Position: {x: -7, y: 2, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
-    Position: {x: -6, y: 2, z: 0}
-    Rotation: 3
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
-    Position: {x: -5, y: 2, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -4, y: 2, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
-    Position: {x: -3, y: 2, z: 0}
-    Rotation: 3
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
-    Position: {x: 4, y: 2, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 5, y: 2, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
-    Position: {x: 6, y: 2, z: 0}
-    Rotation: 3
-    Mirrored: 0
   - Type: 101
     Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: -6, y: 3, z: 0}
+    Position: {x: -4, y: 2, z: 0}
     Rotation: 0
     Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
-    Position: {x: -3, y: 3, z: 0}
+  - Type: 103
+    Tile: {fileID: 11400000, guid: 5d2d7602f1cd13b4f93889d9b276cb13, type: 2}
+    Position: {x: 0, y: 2, z: 0}
     Rotation: 1
     Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
-    Position: {x: -2, y: 3, z: 0}
-    Rotation: 3
+  - Type: 101
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: 1, y: 2, z: 0}
+    Rotation: 1
     Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 8db555b7e948f5342beb8fef891976fd, type: 2}
-    Position: {x: 0, y: 3, z: 0}
+  - Type: 101
+    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
+    Position: {x: 2, y: 2, z: 0}
+    Rotation: 1
+    Mirrored: 0
+  - Type: 103
+    Tile: {fileID: 11400000, guid: bae94c06dd34c6c45b7fab4aee902480, type: 2}
+    Position: {x: 3, y: 2, z: 0}
     Rotation: 2
     Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 1, y: 3, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
-    Position: {x: 2, y: 3, z: 0}
-    Rotation: 3
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: 6, y: 3, z: 0}
-    Rotation: 0
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
-    Position: {x: -6, y: 4, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -5, y: 4, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 22dd24611d356f6478c5f82bd01700f3, type: 2}
-    Position: {x: -4, y: 4, z: 0}
-    Rotation: 3
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
-    Position: {x: -2, y: 4, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -1, y: 4, z: 0}
-    Rotation: 1
-    Mirrored: 0
   - Type: 102
     Tile: {fileID: 11400000, guid: 52d9f15e03a655d4e8c344d6b775547f, type: 2}
-    Position: {x: 0, y: 4, z: 0}
+    Position: {x: 4, y: 2, z: 0}
     Rotation: 0
     Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: ace9032ae0d531b44ad4ab16d32d3b7d, type: 2}
-    Position: {x: 2, y: 4, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 3, y: 4, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 4, y: 4, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 5, y: 4, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 102
-    Tile: {fileID: 11400000, guid: 52d9f15e03a655d4e8c344d6b775547f, type: 2}
-    Position: {x: 6, y: 4, z: 0}
-    Rotation: 0
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
-    Position: {x: -4, y: 5, z: 0}
-    Rotation: 0
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -9, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -8, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -7, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -6, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -5, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 104
-    Tile: {fileID: 11400000, guid: 31d37ec651cb59a488a438d5e1b3a5ce, type: 2}
-    Position: {x: -4, y: 6, z: 0}
-    Rotation: 0
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -3, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -2, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -1, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 0, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 1, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 2, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 3, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 4, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 5, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 6, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 7, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 8, y: 6, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -9, y: 7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -8, y: 7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -7, y: 7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -6, y: 7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -5, y: 7, z: 0}
+  - Type: 105
+    Tile: {fileID: 11400000, guid: a1f0947a15b9ff745bb57a534218be83, type: 2}
+    Position: {x: -5, y: 3, z: 0}
     Rotation: 1
     Mirrored: 0
   - Type: 103
     Tile: {fileID: 11400000, guid: 3957ffd3df5890546b97bf4cfa1b4141, type: 2}
-    Position: {x: -4, y: 7, z: 0}
+    Position: {x: -4, y: 3, z: 0}
     Rotation: 0
     Mirrored: 0
   - Type: 101
     Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -3, y: 7, z: 0}
+    Position: {x: -3, y: 3, z: 0}
     Rotation: 1
+    Mirrored: 0
+  - Type: 103
+    Tile: {fileID: 11400000, guid: bae94c06dd34c6c45b7fab4aee902480, type: 2}
+    Position: {x: -2, y: 3, z: 0}
+    Rotation: 2
     Mirrored: 0
   - Type: 101
     Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -2, y: 7, z: 0}
+    Position: {x: -1, y: 3, z: 0}
     Rotation: 1
     Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: -1, y: 7, z: 0}
-    Rotation: 1
+  - Type: 102
+    Tile: {fileID: 11400000, guid: 52d9f15e03a655d4e8c344d6b775547f, type: 2}
+    Position: {x: 0, y: 3, z: 0}
+    Rotation: 0
     Mirrored: 0
   - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 0, y: 7, z: 0}
-    Rotation: 1
+    Tile: {fileID: 11400000, guid: 3f3df2361319de14ca3fc99e2416ade9, type: 2}
+    Position: {x: 3, y: 3, z: 0}
+    Rotation: 0
     Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 1, y: 7, z: 0}
-    Rotation: 1
+  - Type: 105
+    Tile: {fileID: 11400000, guid: 2c0be932c182dcd4f8c9eeb36c1757b2, type: 2}
+    Position: {x: -2, y: 4, z: 0}
+    Rotation: 0
     Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 2, y: 7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 3, y: 7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 4, y: 7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 5, y: 7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 6, y: 7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 7, y: 7, z: 0}
-    Rotation: 1
-    Mirrored: 0
-  - Type: 101
-    Tile: {fileID: 11400000, guid: b1f89fbb8fd8913498cafcae04deee46, type: 2}
-    Position: {x: 8, y: 7, z: 0}
-    Rotation: 1
+  - Type: 105
+    Tile: {fileID: 11400000, guid: 2c0be932c182dcd4f8c9eeb36c1757b2, type: 2}
+    Position: {x: 3, y: 4, z: 0}
+    Rotation: 0
     Mirrored: 0
   Entities:
   - Type: 1
-    Position: {x: -18.277191, y: 2, z: -4.9000015}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -2.5, y: 2, z: -4.9}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -68.8, y: 2, z: -54.7}
-    VariantIndex: 1
-    IsSprite: 0
-    Rotation: 90
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 3.2507849, y: 2, z: -24.5}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 19.3, y: 2, z: -24.5}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 35.07719, y: 2, z: -24.5}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -64.46887, y: 2, z: 52.77198}
-    VariantIndex: 2
-    IsSprite: 0
-    Rotation: 315
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -66.6, y: 2, z: 38.898933}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 90
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -50.323803, y: 2, z: 55.220165}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 59.300484, y: 2, z: 14.417088}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 67.4611, y: 2, z: -31.28236}
-    VariantIndex: 0
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 67.4611, y: 2, z: -0.8160618}
-    VariantIndex: 0
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -39.715004, y: 2, z: 35.09065}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -55.220173, y: 2, z: 15.50517}
-    VariantIndex: 2
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -32.370445, y: 2, z: 14.961129}
+    Position: {x: -42, y: 2, z: -5}
     VariantIndex: 2
     IsSprite: 0
     Rotation: 90
     Mirrored: 0
   - Type: 1
-    Position: {x: -9.5, y: 2, z: 24.5}
-    VariantIndex: 1
+    Position: {x: 15, y: 2, z: -9}
+    VariantIndex: 3
     IsSprite: 0
-    Rotation: 315
+    Rotation: 90
     Mirrored: 0
   - Type: 1
-    Position: {x: 29.922262, y: 2, z: 2.7202048}
+    Position: {x: 30, y: 2, z: -15}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -21, y: 2, z: 25}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 33, y: 2, z: 10}
     VariantIndex: 4
     IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 34.546608, y: 2, z: -11.696881}
-    VariantIndex: 1
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 13.873049, y: 2, z: 23.937807}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 30.738323, y: 2, z: 23.937807}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 50.323803, y: 2, z: 34.818626}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -17.437809, y: 2, z: 54.9}
-    VariantIndex: 1
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 6.5, y: 2, z: 54.9}
-    VariantIndex: 1
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 30.70983, y: 2, z: 54.9}
-    VariantIndex: 1
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 53.83158, y: 2, z: 54.9}
-    VariantIndex: 1
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -25.297913, y: 2, z: -27.474073}
-    VariantIndex: 2
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -24.75387, y: 2, z: -17.681334}
-    VariantIndex: 2
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -69.1, y: 2, z: -30.5}
-    VariantIndex: 1
-    IsSprite: 0
     Rotation: 90
     Mirrored: 0
   - Type: 1
-    Position: {x: -54.13209, y: 2, z: -11.968903}
-    VariantIndex: 1
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 19.6, y: 2, z: -62.6}
-    VariantIndex: 1
-    IsSprite: 0
-    Rotation: 90
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -9.79274, y: 2, z: -68.27715}
+    Position: {x: 17, y: 2, z: 10}
     VariantIndex: 4
     IsSprite: 0
-    Rotation: 0
+    Rotation: 90
     Mirrored: 0
   - Type: 1
-    Position: {x: -37, y: 2, z: -47.6}
+    Position: {x: -25, y: 2, z: 0}
+    VariantIndex: 0
+    IsSprite: 0
+    Rotation: 30.000008
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -6, y: 2, z: 18}
+    VariantIndex: 2
+    IsSprite: 0
+    Rotation: 344.99997
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -7, y: 2, z: -1}
     VariantIndex: 1
     IsSprite: 0
-    Rotation: 300
+    Rotation: 90
     Mirrored: 0
   - Type: 1
-    Position: {x: -36.722775, y: 2, z: -38.354893}
-    VariantIndex: 1
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 44.57719, y: 2, z: -44.9}
+    Position: {x: -25, y: 2, z: -29}
     VariantIndex: 3
     IsSprite: 0
-    Rotation: 0
+    Rotation: 90
     Mirrored: 0
   - Type: 1
-    Position: {x: 28.8, y: 2, z: -44.9}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: 12.750785, y: 2, z: -44.9}
-    VariantIndex: 3
-    IsSprite: 0
-    Rotation: 0
-    Mirrored: 0
-  - Type: 1
-    Position: {x: -2.7543864, y: 2, z: -44.9}
+    Position: {x: -11, y: 2, z: -35}
     VariantIndex: 3
     IsSprite: 0
     Rotation: 0
     Mirrored: 0
   - Type: 0
-    Position: {x: 59.300484, y: -0.1000061, z: 65.556946}
-    VariantIndex: 0
-    IsSprite: 1
-    Rotation: 0
-    Mirrored: 0
-  - Type: 0
-    Position: {x: -60.4, y: -0.1000061, z: -71.5414}
+    Position: {x: -49, y: 0, z: 35.3}
     VariantIndex: 0
     IsSprite: 1
     Rotation: 30.000004
     Mirrored: 0
-  - Type: 0
-    Position: {x: -18.225376, y: -0.1000061, z: -44.611366}
+  - Type: 1
+    Position: {x: 14.805568, y: 2, z: 54.1}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 300
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -14.59406, y: 2, z: 58.58774}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 29, y: 2, z: 57.25}
+    VariantIndex: 2
+    IsSprite: 0
+    Rotation: 344.99997
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 41, y: 2, z: 57.25}
+    VariantIndex: 2
+    IsSprite: 0
+    Rotation: 14.999995
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 35, y: 2, z: 58}
+    VariantIndex: 2
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -48.435356, y: 2, z: -62.817905}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -48.435356, y: 2, z: -52.242504}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -30.2, y: 2, z: -62.2}
+    VariantIndex: 1
+    IsSprite: 0
+    Rotation: 90
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -19.247238, y: 2, z: -62.606396}
+    VariantIndex: 1
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -8.7, y: 2, z: -62.8}
+    VariantIndex: 1
+    IsSprite: 0
+    Rotation: 90
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 14.6, y: 2, z: -57.3}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 90
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 49.069885, y: 2, z: -56.261158}
+    VariantIndex: 2
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 39.975033, y: 2, z: -55.838142}
+    VariantIndex: 2
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 55.7, y: 2, z: -44.3}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 90
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 48.7, y: 2, z: 41.6}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 90
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -71, y: 2, z: -15.8}
+    VariantIndex: 1
+    IsSprite: 0
+    Rotation: 90
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 59, y: 2, z: 30.051016}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 330
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -60.90607, y: 2, z: 29.072495}
+    VariantIndex: 2
+    IsSprite: 0
+    Rotation: 270
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 59, y: 2, z: -25.982561}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 330
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -58.8, y: 2, z: 39.1}
+    VariantIndex: 2
+    IsSprite: 0
+    Rotation: 300
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 59, y: 2, z: -14.775848}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 330
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -52.135593, y: 2, z: 45.96377}
+    VariantIndex: 2
+    IsSprite: 0
+    Rotation: 330
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 59, y: 2, z: -3.2442994}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 330
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -0.6, y: 2, z: 47.4}
     VariantIndex: 0
-    IsSprite: 1
+    IsSprite: 0
+    Rotation: 90
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 27.3, y: 2, z: -55.838142}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 59, y: 2, z: 19.006716}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 330
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -34.91948, y: 2, z: 48.887264}
+    VariantIndex: 1
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 59, y: 2, z: 7.8}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 330
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -69.02688, y: 2, z: -26.636251}
+    VariantIndex: 1
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -67.88996, y: 2, z: 17.86578}
+    VariantIndex: 1
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -47.9, y: 2, z: 20.3}
+    VariantIndex: 4
+    IsSprite: 0
+    Rotation: 90
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -48.4, y: 2, z: -32.8}
+    VariantIndex: 1
+    IsSprite: 0
+    Rotation: 90
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 14.455041, y: 2, z: -41.091293}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 90
+    Mirrored: 0
+  - Type: 1
+    Position: {x: -71.3, y: 2, z: 7.2}
+    VariantIndex: 1
+    IsSprite: 0
+    Rotation: 90
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 38.492638, y: 2, z: -34.91948}
+    VariantIndex: 3
+    IsSprite: 0
+    Rotation: 0
+    Mirrored: 0
+  - Type: 1
+    Position: {x: 19.002693, y: 2, z: 38.655045}
+    VariantIndex: 4
+    IsSprite: 0
     Rotation: 0
     Mirrored: 0
   - Type: 0
-    Position: {x: -62.564728, y: -0.1000061, z: 15.50517}
-    VariantIndex: 0
-    IsSprite: 1
-    Rotation: 0
-    Mirrored: 0
-  - Type: 0
-    Position: {x: 32.098427, y: -0.1000061, z: -56.03623}
-    VariantIndex: 0
-    IsSprite: 1
-    Rotation: 0
-    Mirrored: 0
-  - Type: 0
-    Position: {x: 67.18908, y: -0.1000061, z: -16.865273}
-    VariantIndex: 0
-    IsSprite: 1
-    Rotation: 0
-    Mirrored: 0
-  - Type: 0
-    Position: {x: 0.8160617, y: -0.1000061, z: 16.321232}
-    VariantIndex: 0
-    IsSprite: 1
-    Rotation: 0
-    Mirrored: 0
-  - Type: 0
-    Position: {x: -26.4, y: -0.1000061, z: 42.7}
+    Position: {x: 47, y: 0, z: -21.3}
     VariantIndex: 0
     IsSprite: 1
     Rotation: 330
     Mirrored: 0
   - Type: 0
-    Position: {x: 34.81863, y: -0.1000061, z: 34.274586}
+    Position: {x: -32.8, y: 0, z: -10.1}
+    VariantIndex: 0
+    IsSprite: 1
+    Rotation: 0
+    Mirrored: 0
+  - Type: 0
+    Position: {x: -14.9, y: 0, z: 49.2}
+    VariantIndex: 0
+    IsSprite: 1
+    Rotation: 0
+    Mirrored: 0
+  - Type: 0
+    Position: {x: 34.898838, y: 0, z: 48.646862}
+    VariantIndex: 0
+    IsSprite: 1
+    Rotation: 0
+    Mirrored: 0
+  - Type: 0
+    Position: {x: 24.2, y: 0, z: -46}
+    VariantIndex: 0
+    IsSprite: 1
+    Rotation: 45
+    Mirrored: 0
+  - Type: 0
+    Position: {x: 24.7, y: 0, z: -3.2}
+    VariantIndex: 0
+    IsSprite: 1
+    Rotation: 345
+    Mirrored: 0
+  - Type: 0
+    Position: {x: -59.02846, y: -0.1000061, z: -38.082874}
+    VariantIndex: 0
+    IsSprite: 1
+    Rotation: 0
+    Mirrored: 0
+  - Type: 0
+    Position: {x: -59.844524, y: -0.1000061, z: 7.0725336}
+    VariantIndex: 0
+    IsSprite: 1
+    Rotation: 0
+    Mirrored: 0
+  - Type: 0
+    Position: {x: 4.6243496, y: -0.1000061, z: 36.994793}
     VariantIndex: 0
     IsSprite: 1
     Rotation: 0

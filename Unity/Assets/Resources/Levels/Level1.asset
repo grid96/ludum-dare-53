@@ -15,8 +15,8 @@ MonoBehaviour:
   Index: 1
   TruckSpeed: 15
   TargetTimes:
-  - 60
   - 90
+  - 60
   Tiles:
   - Type: 1
     Tile: {fileID: 11400000, guid: c415cf3ce258d8d489b67ab174e296be, type: 2}
